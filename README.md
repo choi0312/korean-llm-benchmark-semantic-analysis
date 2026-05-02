@@ -2,6 +2,8 @@
 
 > [Research] Korean LLM benchmark semantic structure analysis with large-corpus Word2Vec, Korean morphology, cosine similarity, and TextRank
 
+**[2026년 1학기 빅데이터최신기술]**
+
 본 프로젝트는 한국어 LLM 벤치마크를 단순한 성능 점수의 집합이 아니라 **분석 가능한 전문지식 문항 텍스트**로 보고, KMMLU-Redux와 KMMLU-Pro의 형태소·어휘·문장 의미 구조를 비교하는 연구형 NLP 프로젝트입니다.
 
 이번 버전에서는 기존의 "벤치마크 문항만으로 Word2Vec을 학습하는 방식"을 개선하여, **KCC, Wikipedia, WikiText와 같은 대용량 한국어 말뭉치 기반 Word2Vec 학습 구조**로 재설계했습니다. 대용량 말뭉치에서 일반 한국어 문맥을 먼저 학습하고, 벤치마크 문항을 함께 반영함으로써 희소 전문용어와 문항 어휘의 의미벡터 안정성을 높이는 것을 목표로 합니다.
