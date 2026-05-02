@@ -1,0 +1,55 @@
+project:
+  output_dir: "outputs"
+  seed: 42
+
+datasets:
+  KMMLU-Redux: "LGAI-EXAONE/KMMLU-Redux"
+  KMMLU-Pro: "LGAI-EXAONE/KMMLU-Pro"
+  max_rows_per_dataset: null
+
+corpus:
+  source: "wikipedia_hf"
+  custom_text_path: "/content/corpus.txt"
+  max_corpus_lines: null
+  wikipedia_candidates:
+    - dataset: "wikimedia/wikipedia"
+      config: "20231101.ko"
+      split: "train"
+      text_column: "text"
+    - dataset: "wikipedia"
+      config: "20220301.ko"
+      split: "train"
+      text_column: "text"
+  combine_benchmark_text: true
+
+tokenizer:
+  analyzer: "okt"
+  force_retokenize: false
+  tokenize_corpus: true
+  min_sentence_tokens: 2
+
+word2vec:
+  vector_size: 200
+  window: 5
+  min_count: 3
+  epochs: 10
+  sg: 1
+  negative: 10
+  workers: 4
+
+analysis:
+  top_nouns: 50
+  similar_topn: 8
+
+clustering:
+  top_terms: 180
+  n_clusters: 7
+  tsne_top_labels: 80
+
+similarity:
+  top_pair_n: 50
+  top_domains: 12
+
+textrank:
+  topn: 15
+  neighbor_k: 10

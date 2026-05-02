@@ -1,0 +1,36 @@
+# Secrets
+.env
+*.token
+*.key
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+*.ipynb
+
+# Outputs and large files
+outputs/
+outputs_validation/
+kmmlu_report_outputs/
+cache/
+models/
+*.model
+*.pkl
+*.zip
+*.npy
+*.npz
+
+# Raw data
+data/raw/
+data/cache/
+*.parquet
+*.arrow
+*.jsonl
+data/raw/*.txt
+data/cache/*.txt
+
+# OS
+.DS_Store
